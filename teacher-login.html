@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #uploadSection {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Teacher Login</h2>
+    <input type="text" id="loginName" placeholder="Teacher Name">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <p id="loginStatus"></p>
+
+    <div id="uploadSection">
+        <h3>Upload Course Video</h3>
+        <input type="text" id="videoUrl" placeholder="Video URL">
+        <button id="uploadVideoBtn">Upload</button>
+        <p id="uploadStatus"></p>
+    </div>
+
+    <script type="module" src="teacher-login.js"></script>
+</body>
+</html>
