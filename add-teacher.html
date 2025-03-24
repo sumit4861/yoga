@@ -6,39 +6,89 @@
     <title>Add Teacher</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+        }
+        .form-container {
+            background: #ffffffcc;
+            border-radius: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+            border: 3px solid #f9d423;
+            animation: pulseEffect 1s infinite alternate ease-in-out;
+        }
+        @keyframes pulseEffect {
+            from {
+                transform: scale(1);
+                border-color: #ff4e50;
+            }
+            to {
+                transform: scale(1.05);
+                border-color: #f9d423;
+            }
+        }
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
         }
         input, button {
             display: block;
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
+            margin: 15px auto;
+            padding: 15px;
+            width: 90%;
+            font-size: 1.2rem;
+            border: 3px solid #ddd;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        input:hover {
+            border-color: #f9d423;
+        }
+        input:focus {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            outline: none;
+            border-color: #ff4e50;
         }
         button {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #ff4e50, #f9d423);
             color: white;
-            border: none;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            border: none;
         }
         button:hover {
-            background-color: #0056b3;
+            transform: scale(1.15);
+            background: linear-gradient(45deg, #f9d423, #ff4e50);
+        }
+        #statusMessage {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-    <h2>Add Teacher</h2>
-    <input type="text" id="teacherName" placeholder="Teacher Name">
-    <input type="password" id="teacherPassword" placeholder="Password">
-    <input type="text" id="teacherContact" placeholder="Contact Number">
-    <input type="text" id="teacherExperience" placeholder="Experience (Years)">
-    <input type="text" id="teacherImageUrl" placeholder="Image URL">
-    <button id="addTeacherBtn">Add Teacher</button>
-    <p id="statusMessage"></p>
-
+    <div class="form-container">
+        <h2>Add Teacher</h2>
+        <input type="text" id="teacherName" placeholder="Teacher Name">
+        <input type="password" id="teacherPassword" placeholder="Password">
+        <input type="text" id="teacherContact" placeholder="Contact Number">
+        <input type="text" id="teacherExperience" placeholder="Experience (Years)">
+        <input type="text" id="teacherImageUrl" placeholder="Image URL">
+        <button id="addTeacherBtn">Add Teacher</button>
+        <p id="statusMessage"></p>
+    </div>
     <script type="module" src="add-teacher.js"></script>
 </body>
 </html>
